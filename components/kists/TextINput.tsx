@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 
-import { Send } from 'lucide-react'
+import { Search, Send } from 'lucide-react'
 import React from 'react'
 import { fetchdata, generateId } from '@/helper';
 import { Trending } from '@/store';
@@ -24,7 +24,11 @@ const TextINput = () => {
     
         <textarea onChange={e=> settext(e.target.value)} name="" placeholder='Whats Next? ' className='w-full h-[67%] resize-none outline-0 p-2.5' id=""></textarea>
         <div className="w-full gap-1 flex justify-end items-center">
-        <button onClick={getdata} className='button duration-200 hover:bg-amber-300/20  text-black w-11  rounded-2xl flex justify-center items-center ' >
+          <button className='button flex justify-center gap-1 items-center bg-treand-400/40 border w-max p-2.5 '>
+          <Search/>
+          <span className='text-sm'>Auto Research</span>
+          </button>
+        <button onClick={getdata} className='button duration-200 hover:bg-amber-300/45  text-black w-11  rounded-2xl flex justify-center items-center ' >
           <Send/>
         </button>
    </div>
