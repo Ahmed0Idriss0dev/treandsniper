@@ -26,25 +26,25 @@ const Card = ({ description, estimated_profit_margin, pricing, product_image, pr
         <p>Profit margin </p>
         <p className=' rounded-full'>{estimated_profit_margin} </p>
       </div>
-      <div className="flex rounded-2xl w-full border border-neutral-200 p-3 flex-col ">
+      <div className="flex rounded-2xl w-full border border-neutral-20 bg-yellow-100 p-3 flex-col ">
         <div className="flex items-center gap-1.5">
-        <Target className='text-treand-500'/>
+        <Target className='text-green-950'/>
         <b>target audience</b>
         </div>
         {target_audience?.map((e, i) => (
-          <p className='flex items-center gap-2' key={i}> {e} </p>
+          <p className='flex text-green-950 items-center gap-2' key={i}> {e} </p>
         ))}
       </div>
       <b>trending_reason</b>
       <div className="grid gap-1.5 grid-cols-2">
 
-        <div className="flex justify-center items-center h-30 rounded-2xl flex-col gap-1 border border-treand-950 bg-treand-400/15">
+        <div className="flex justify-center items-center h-30 rounded-2xl flex-col gap-1 border border-[#E5F6A2] bg-yellow-400/15">
           <TrendingUp />
           <b>market demand</b>
           <p>{trending_reason?.market_demand}%</p>
         </div>
-        <div className="flex justify-center items-center h-30 rounded-2xl flex-col gap-0.5 bg-treand-400/15">
-          <TrendingUp />
+        <div className="flex bg-teal-950 justify-center items-center h-30 rounded-2xl flex-col gap-0.5 text-white">
+          <TrendingUp className='text-yellow-200' />
           <b>social signals</b>
           <p>{trending_reason?.social_signals}%</p>
         </div>

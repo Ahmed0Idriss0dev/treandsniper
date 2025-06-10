@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 
-import { Search, Send } from 'lucide-react'
+import { Loader, LoaderCircle, Search, Send } from 'lucide-react'
 import React from 'react'
 import { fetchdata, generateId } from '@/helper';
 import { Trending } from '@/store';
@@ -10,7 +10,7 @@ import { ProductsData } from '@/types';
 
 const TextINput = () => {
     const [text, settext] = useState<string >()
-    const {setdate  , setisStarted  } =Trending()
+    const {setdate  , setisStarted  , isStarted } =Trending()
     
     const getdata=async ()=>{
         setisStarted()
@@ -31,7 +31,7 @@ const TextINput = () => {
           <span className='text-sm'>Auto Research</span>
           </button>
         <button onClick={getdata} className='button duration-200 hover:bg-amber-300/45  text-black w-11  rounded-2xl flex justify-center items-center ' >
-          <Send/>
+      {!isStarted ? <Send/> : <LoaderCircle className='animate-spin'/>}
         </button>
    </div>
    </div>
