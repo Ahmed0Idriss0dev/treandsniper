@@ -20,7 +20,7 @@ export const Trending = create<ZutandsToretype>()(
       },
       setisStarted() {
           set((state)=>({
-          isStarted: state.isStarted ? true: false
+          isStarted: state.isStarted ? false: true
         }))
       },
     }),
