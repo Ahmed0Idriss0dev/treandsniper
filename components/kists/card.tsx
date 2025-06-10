@@ -46,7 +46,6 @@ const Card = ({ description, estimated_profit_margin, pricing, product_image, pr
           <p>{trending_reason?.social_signals}%</p>
         </div>
        </div>
-     {product_image}
      
       <b>resale platforms</b>
       <div className="">

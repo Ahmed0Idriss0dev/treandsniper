@@ -22,7 +22,7 @@ export interface Cardtype{
 }
 export interface ProductsData{
     id:string ,
-    data:Cardtype[] ,
+    ProductData:Cardtype[] ,
 }
 export interface ZutandsToretype{
     data:ProductsData[],

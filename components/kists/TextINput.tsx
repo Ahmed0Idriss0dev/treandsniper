@@ -6,6 +6,7 @@ import React from 'react'
 import { fetchdata, generateId } from '@/helper';
 import { Trending } from '@/store';
 import { redirect } from 'next/navigation';
+import { ProductsData } from '@/types';
 
 const TextINput = () => {
     const [text, settext] = useState<string >()
@@ -14,8 +15,7 @@ const TextINput = () => {
     const getdata=async ()=>{
         const data = await fetchdata({prompt:text})
         const id = generateId()
-        console.log(data)
-        const product={ id , data:data}
+        const product:ProductsData={ id , ProductData:data}  
         setdate(product)
         redirect(`/tools/${id}`)
       }
