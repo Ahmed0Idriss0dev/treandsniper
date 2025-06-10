@@ -10,13 +10,15 @@ import { ProductsData } from '@/types';
 
 const TextINput = () => {
     const [text, settext] = useState<string >()
-    const {setdate  } =Trending()
+    const {setdate  , setisStarted  } =Trending()
     
     const getdata=async ()=>{
+        setisStarted()
         const data = await fetchdata({prompt:text})
         const id = generateId()
         const product:ProductsData={ id , ProductData:data}  
         setdate(product)
+        setisStarted()
         redirect(`/tools/${id}`)
       }
   return (

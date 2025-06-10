@@ -10,8 +10,7 @@ const page =  () => {
   const {isComplet } = Trending()
   return (
     <div className='flex justify-center flex-col gap-2.5 h-dvh items-center'>
-      {isComplet &&  <Animation/>}
-      {!isComplet &&  <Welcome/>}
+      {isComplet ?  <Animation/> : <Welcome/>}
 
 
       <TextINput />

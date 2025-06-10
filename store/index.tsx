@@ -15,12 +15,12 @@ export const Trending = create<ZutandsToretype>()(
       },
       setisComplet() {
         set((state)=>({
-          isComplet: state.isComplet ? false : true
+          isComplet: state.isComplet ? true : false
         }))
       },
       setisStarted() {
           set((state)=>({
-          isStarted: state.isStarted ? false : true
+          isStarted: state.isStarted ? true: false
         }))
       },
     }),
