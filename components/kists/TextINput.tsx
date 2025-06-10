@@ -1,12 +1,13 @@
 'use client'
 import { useState } from 'react';
 
-import { Loader, LoaderCircle, Search, Send } from 'lucide-react'
+import { BrainCog, Loader, LoaderCircle, Search, Send } from 'lucide-react'
 import React from 'react'
 import { fetchdata, generateId } from '@/helper';
 import { Trending } from '@/store';
 import { redirect } from 'next/navigation';
 import { ProductsData } from '@/types';
+import Look from './Look';
 
 const TextINput = () => {
     const [text, settext] = useState<string >()
@@ -26,7 +27,8 @@ const TextINput = () => {
     
         <textarea onChange={e=> settext(e.target.value)} name="" placeholder='Whats Next? ' className='w-full h-[67%] resize-none outline-0 p-2.5' id=""></textarea>
         <div className="w-full gap-1 flex justify-end items-center">
-          <button className='button flex justify-center gap-1 items-center bg-treand-400/40 border w-max p-2.5 '>
+         <Look/>
+          <button className='button flex justify-center gap-1 items-center bg-red-400/20 text-red-950 border w-max p-2.5 '>
           <Search/>
           <span className='text-sm'>Auto Research</span>
           </button>
