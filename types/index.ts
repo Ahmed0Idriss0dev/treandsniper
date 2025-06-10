@@ -20,3 +20,13 @@ export interface Cardtype{
                 unique_selling_points?:string,
                 product_image?: string ,
 }
+export interface ProductsData{
+    id:string ,
+    data:Cardtype[] ,
+}
+export interface ZutandsToretype{
+    data:ProductsData[],
+    isStarted:boolean ,
+    isComplet:boolean ,
+    setdate:(aregument:ProductsData)=> void
+}

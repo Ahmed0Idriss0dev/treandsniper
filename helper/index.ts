@@ -1,14 +1,16 @@
+import { v4  } from 'uuid';
 interface parameter {
-    prompt:string
+    prompt:string ,
+    date?:Date
 }
-export const fetchdata= async ({prompt}:parameter)=>{
+export const fetchdata= async ({prompt , date}:parameter)=>{
         try {
-          const response = await fetch('https://treandsniper.vercel.app/api/chat',{
+          const response = await fetch('http://localhost:3000/api/chat',{
             method:'POST' ,
             headers:{
               'Content-Type':'application/json'
             } ,
-            body:JSON.stringify({prompt})
+            body:JSON.stringify({prompt , date})
           })
           const data = await response.json()
           return data.object
@@ -16,3 +18,9 @@ export const fetchdata= async ({prompt}:parameter)=>{
           
         }
   }
+  
+  export  function generateId() {
+     const id = v4()
+     return id
+  }
+  

@@ -1,21 +1,25 @@
 'use client'
 import Card from '@/components/kists/card'
 import { fetchdata } from '@/helper'
+import { Trending } from '@/store'
 import { Cardtype } from '@/types'
 import React, { useState } from 'react'
 
-export const dynamicParams = true // true | false,
-
+export const dynamicParams = true 
+import { useParams } from 'next/navigation'
 const page =  () => {
-  const [Products  ,setProducts ] =useState<Cardtype>()
-  const getdata=async ()=>{
-    const data = await fetchdata({prompt:'you have acces to find'})
-    console.log(data)
-    setProducts(data)
-  }
+  const params = useParams<{ toolid: string }>()  
+  const {toolid} =params
+  const {data} = Trending()
+
+const findfirst = data.find(({id}) => id ===params.toolid );
+
+const Products = findfirst?.data as Cardtype
+console.log(params)
+
+ 
   return (
     <div className='flex Whitespace justify-center items-center h-max'>
-      <button onClick={getdata}>get</button>
       <div className="flex justify-center w-full  rounded-2xl p-2.5 sm:w-[90%] gap-1.5 h-full ">
         <Card 
         description={Products?.description}
