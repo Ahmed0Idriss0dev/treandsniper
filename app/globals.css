@@ -56,7 +56,7 @@
 
 @layer components{
   .button{
-    @apply w-40 h-11 rounded-2xl 
+    @apply w-40 h-11 rounded-2xl cursor-pointer
   }
   .whitespace{
     @apply px-4 sm:px-8
