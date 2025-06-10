@@ -13,6 +13,16 @@ export const Trending = create<ZutandsToretype>()(
             data:[...state.data ,aregument]
           }))
       },
+      setisComplet() {
+        set((state)=>({
+          isComplet: state.isComplet ? false : true
+        }))
+      },
+      setisStarted() {
+          set((state)=>({
+          isStarted: state.isStarted ? false : true
+        }))
+      },
     }),
     {
       name: 'Trending', // name of the item in the storage (must be unique)

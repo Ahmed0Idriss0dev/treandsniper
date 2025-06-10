@@ -28,5 +28,7 @@ export interface ZutandsToretype{
     data:ProductsData[],
     isStarted:boolean ,
     isComplet:boolean ,
+    setisComplet:()=>void ,
+    setisStarted:()=>void ,
     setdate:(aregument:ProductsData)=> void
 }

@@ -1,17 +1,18 @@
+'use client'
 import Animation from '@/components/kists/Animation'
-import Niches from '@/components/kists/Neiche'
-import Products from '@/components/kists/Products'
-import Providers from '@/components/kists/Providers'
 import TextINput from '@/components/kists/TextINput'
 import Welcome from '@/components/kists/Welcome'
-import { currentUser } from '@clerk/nextjs/server'
-import { Send } from 'lucide-react'
+import { Trending } from '@/store'
+
 import React from 'react'
 
-const page = async () => {
+const page =  () => {
+  const {isComplet } = Trending()
   return (
     <div className='flex justify-center flex-col gap-2.5 h-dvh items-center'>
-      <Animation/>
+      {isComplet &&  <Animation/>}
+      {!isComplet &&  <Welcome/>}
+
 
       <TextINput />
     </div>
