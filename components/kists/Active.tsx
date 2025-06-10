@@ -19,8 +19,8 @@ const Active = () => {
   <DialogContent>
     <DialogHeader>
       <DialogTitle>Upgread Your account </DialogTitle>
-      <input type="text" placeholder='' className='w-full h-11 rounded-md border border-neutral-200 px-1.5 outline-0' />
-      <a href="https://ahmedidev.gumroad.com/l/TrendingSnipe?_gl=1*12w1s11*_ga*MTYzMDQxMzQ5LjE3NDk1NjM4NjM.*_ga_6LJN6D94N6*czE3NDk1Njc4MTQkbzIkZzEkdDE3NDk1Njc4MTckajU3JGwwJGgw" target="_blank" rel="noopener noreferrer">
+      <input type="text" placeholder='Your licenes key' className='w-full h-11 rounded-md border border-neutral-200 px-1.5 outline-0' />
+      <a className='text-blue-700 underline text-sm' href="https://ahmedidev.gumroad.com/l/TrendingSnipe?_gl=1*12w1s11*_ga*MTYzMDQxMzQ5LjE3NDk1NjM4NjM.*_ga_6LJN6D94N6*czE3NDk1Njc4MTQkbzIkZzEkdDE3NDk1Njc4MTckajU3JGwwJGgw" target="_blank" rel="noopener noreferrer">
       get licences kay 6$
       </a>
       <Steps/>
