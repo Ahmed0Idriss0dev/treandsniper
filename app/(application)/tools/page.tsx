@@ -10,7 +10,7 @@ const page =  () => {
   const {isStarted } = Trending()
   return (
     <div className='flex justify-center flex-col gap-2.5 h-dvh items-center'>
-      {!isStarted ?  <Animation/> : <Welcome/>}
+      {isStarted ?  <Animation/> : <Welcome/>}
 
 
       <TextINput />

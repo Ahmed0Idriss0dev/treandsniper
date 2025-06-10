@@ -3,7 +3,7 @@ import Priceplan from '../kists/Priceplan'
 
 const Praice = () => {
   return (
-    <main className='w-full flex justify-center items-center bg-treand-500 h-dvh'>
+    <main className='w-full flex justify-center items-center bg-black h-dvh'>
         <Priceplan/>
     </main>
   )

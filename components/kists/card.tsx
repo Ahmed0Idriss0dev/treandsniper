@@ -21,14 +21,14 @@ const Card = ({ description, estimated_profit_margin, pricing, product_image, pr
           <p>{pricing?.suggested_resale_price}$ </p>
         </div>
       </div>
-      <div className="flex justify-center items-center h-30 rounded-2xl flex-col gap-1 border border-treand-400">
+      <div className="flex justify-center items-center h-30 rounded-2xl bg-treand-50 flex-col gap-1 border border-neutral-200">
         <Sprout />
         <p>Profit margin </p>
         <p className=' rounded-full'>{estimated_profit_margin} </p>
       </div>
       <div className="flex rounded-2xl w-full border border-neutral-200 p-3 flex-col ">
         <div className="flex items-center gap-1.5">
-        <Target/>
+        <Target className='text-treand-500'/>
         <b>target audience</b>
         </div>
         {target_audience?.map((e, i) => (
