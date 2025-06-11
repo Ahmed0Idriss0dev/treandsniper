@@ -1,6 +1,6 @@
+'use client'
 import { useState } from 'react';
 
-'use client'
 import React from 'react'
 import {
   Dialog,
@@ -13,26 +13,34 @@ import {
 import { Star } from 'lucide-react'
 import Steps from './Steps'
 import { Subscribe } from '@/helper';
+import Error from './Alert';
 const Active = () => {
+  const [alert, setalert] = useState<Boolean>()
   const [Key, setKey] = useState<string>()
   async function confirme() {
+    if(!Key?.trim()) setalert(true)
     const data = await Subscribe(Key)
   }
   return (
    <Dialog>
-  <DialogTrigger className='flex justify-center items-center gap-1 bg-linear-300 from-white text-black border border-neutral-100 to-treand-700/15 button w-30 h-11 bg-treand-100'>
+  <DialogTrigger className='flex justify-center  items-center gap-1 bg-linear-300 from-white text-black border border-neutral-100 to-treand-700/15 button w-30 h-11 bg-treand-100'>
     <Star />
     <span>Upgread</span>
   </DialogTrigger>
   <DialogContent>
     <DialogHeader>
+        {alert && <Error/>}
       <DialogTitle>Upgread Your account </DialogTitle>
-      <input type="text" placeholder='Your licenes key' className='w-full h-11 rounded-md border border-neutral-200 px-1.5 outline-0' />
-      <button className='button '>Active</button>
-      <a className='text-blue-700 underline text-sm' href="https://ahmedidev.gumroad.com/l/TrendingSnipe?_gl=1*12w1s11*_ga*MTYzMDQxMzQ5LjE3NDk1NjM4NjM.*_ga_6LJN6D94N6*czE3NDk1Njc4MTQkbzIkZzEkdDE3NDk1Njc4MTckajU3JGwwJGgw" target="_blank" rel="noopener noreferrer">
+      <div className="flex items-center gap-1.5">
+      <input onInput={e=>setKey(e.currentTarget.value)} type="text" placeholder='Your licenes key' className='w-full h-11 rounded-md border border-neutral-200 px-1.5 outline-0' />
+
+      </div>
+      <a className='text-blue-700 underline text-sm' href="https://mrprobuild.gumroad.com/l/TrendingSnipe?_gl=1*1sm77yl*_ga*MTYzMDQxMzQ5LjE3NDk1NjM4NjM.*_ga_6LJN6D94N6*czE3NDk2NDM1ODgkbzUkZzEkdDE3NDk2NDM2NTIkajYwJGwwJGgw" target="_blank" rel="noopener noreferrer">
       get licences kay 6$
       </a>
       <Steps/>
+        <button onClick={confirme} className='button w-full rounded-2xl bg-treand-700 text-white '>Active Subscription</button>
+
     </DialogHeader>
   </DialogContent>
 </Dialog>

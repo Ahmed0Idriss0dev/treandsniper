@@ -20,7 +20,7 @@ const Priceplan = () => {
                 <p>ultimaite access</p>
 
             </div>
-            <a className='w-full ' href="https://ahmedidev.gumroad.com/l/TrendingSnipe?_gl=1*12w1s11*_ga*MTYzMDQxMzQ5LjE3NDk1NjM4NjM.*_ga_6LJN6D94N6*czE3NDk1Njc4MTQkbzIkZzEkdDE3NDk1Njc4MTckajU3JGwwJGgw" target="_blank" rel="noopener noreferrer">
+            <a className='w-full ' href="https://mrprobuild.gumroad.com/l/TrendingSnipe?_gl=1*1sm77yl*_ga*MTYzMDQxMzQ5LjE3NDk1NjM4NjM.*_ga_6LJN6D94N6*czE3NDk2NDM1ODgkbzUkZzEkdDE3NDk2NDM2NTIkajYwJGwwJGgw" target="_blank" rel="noopener noreferrer">
             
             <button className='w-full text-white cursor-pointer h-12 bg-treand-700 rounded-2xl'>Grow now</button>
             </a>
