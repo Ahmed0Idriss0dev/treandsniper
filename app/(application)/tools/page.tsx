@@ -1,7 +1,7 @@
 'use client'
-import Animation from '@/components/kists/Animation'
-import TextINput from '@/components/kists/TextINput'
-import Welcome from '@/components/kists/Welcome'
+import Animation from '@/components/kist/Animation'
+import TextINput from '@/components/kist/TextINput'
+import Welcome from '@/components/kist/Welcome'
 import { Trending } from '@/store'
 
 import React from 'react'

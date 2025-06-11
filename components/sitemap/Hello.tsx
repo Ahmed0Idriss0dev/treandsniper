@@ -1,5 +1,5 @@
 import React from 'react'
-import Providers from '../kists/Providers'
+import Providers from '../kist/Providers'
 import Link from 'next/link'
 
 const Hello = () => {

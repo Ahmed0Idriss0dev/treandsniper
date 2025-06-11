@@ -1,9 +1,9 @@
 import React from 'react'
-import Logo from '../kists/Logo'
+import Logo from '../kist/Logo'
 import { UserButton } from '@clerk/nextjs'
-import Create from '../kists/Create'
-import ChatList from '../kists/Create'
-import Active from '../kists/Active'
+import Create from '../kist/Create'
+import ChatList from '../kist/Create'
+import Active from '../kist/Active'
 
 const ToolNav = () => {
   return (

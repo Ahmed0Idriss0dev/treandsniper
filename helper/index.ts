@@ -3,9 +3,10 @@ interface parameter {
     prompt:string ,
     date?:Date
 }
+const BaseURL=process.env.BASE_URL ;
 export const fetchdata= async ({prompt , date}:parameter)=>{
         try {
-          const response = await fetch('https://www.trendsniper.site/api/chat',{
+          const response = await fetch(`${BaseURL}/api/chat`,{
             cache:'no-store',
             method:'POST' ,
             headers:{
@@ -25,3 +26,18 @@ export const fetchdata= async ({prompt , date}:parameter)=>{
      return id
   }
   
+  export async function Subscribe(license_key:string) {
+        try {
+          const response = await fetch(`${BaseURL}/api/payment`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                license_key:license_key.trim(),
+            })
+        })
+        } catch (error) {
+          
+        }
+  }

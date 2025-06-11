@@ -1,5 +1,5 @@
 import React from 'react'
-import Priceplan from '../kists/Priceplan'
+import Priceplan from '../kist/Priceplan'
 
 const Praice = () => {
   return (

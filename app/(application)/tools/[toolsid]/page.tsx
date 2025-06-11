@@ -1,5 +1,5 @@
 'use client'
-import Card from '@/components/kists/card'
+import Card from '@/components/kist/card'
 import { fetchdata } from '@/helper'
 import { Trending } from '@/store'
 import { Cardtype } from '@/types'
