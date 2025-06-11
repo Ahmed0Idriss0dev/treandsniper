@@ -5,7 +5,7 @@ interface parameter {
 }
 export const fetchdata= async ({prompt , date}:parameter)=>{
         try {
-          const response = await fetch('http://localhost:3000/api/chat',{
+          const response = await fetch('https://www.trendsniper.site/api/chat',{
             cache:'no-store',
             method:'POST' ,
             headers:{
