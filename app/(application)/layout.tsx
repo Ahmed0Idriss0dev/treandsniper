@@ -6,7 +6,7 @@ export default function Auth({
   children: React.ReactNode;
 }>) {
   return (
-  <main className="w-full whitespace h-dvh">
+  <main className="w-full  h-dvh">
   <ToolNav/>
    {children}
   </main>

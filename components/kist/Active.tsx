@@ -23,9 +23,9 @@ const Active = () => {
   }
   return (
    <Dialog>
-  <DialogTrigger className='flex justify-center  items-center gap-1 bg-linear-300 from-white text-black border border-neutral-100 to-treand-700/15 button w-30 h-11 bg-treand-100'>
+  <DialogTrigger className='flex justify-center  items-center gap-1 bg-linear-300 from-white text-black border border-neutral-100 to-treand-700/15 button w-11 sm:w-30 h-11 bg-treand-100'>
     <Star />
-    <span>Upgread</span>
+    <span className='hidden sm:block'>Upgread</span>
   </DialogTrigger>
   <DialogContent>
     <DialogHeader>

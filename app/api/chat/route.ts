@@ -15,8 +15,8 @@ export async function POST(req: NextRequest) {
             description: z.string(),
             target_audience: z.array(z.string()),
             trending_reason: z.object({
-                market_demand: z.number().describe('analays the market domad per%') ,
-                social_signals:z.number().describe('analays thesocial_signals per%')
+                market_demand: z.number().describe('analays the market domad per%'),
+                social_signals: z.number().describe('analays thesocial_signals per%')
             }),
             source_platform: z.array(z.string()),
             resale_platforms: z.array(z.string()),
@@ -24,21 +24,32 @@ export async function POST(req: NextRequest) {
                 buy_price: z.number(),
                 suggested_resale_price: z.number()
             }),
-            estimated_profit_margin: z.string(), 
+            estimated_profit_margin: z.string(),
             unique_selling_points: z.array(z.string()),
             product_image: z.string().describe('Auto-scraped image URL from the provided product link')
         }),
-
-        prompt: `Search the web and find the best trending digital products in the niche of [${prompt}] that are ideal for buying or reselling. Focus on products with strong online traction, high user engagement, and proven or potential profitability. Evaluate current trends across platforms like Etsy, Amazon, Gumroad, Shopify, and social media. Provide a concise report including:
-                 1. Product Name and Description
-                 2. Target Audience within the niche
-                 3. Why it's currently trending (data or social signals)
-                 4. Where to source or buy it (platform or website)
-                 5. Potential Resale Platforms
-                 6. Pricing (buy and suggested resale)
-                 7. Estimated Profit Margin
-                 8. Any unique selling points or competitive advantages
-                 Ensure the data is fresh, ideally from the last 30-60 days, and prioritize products that align with current digital consumer behavior and demand."i need you to find 3 products`,
+        system: `    Search the web and identify 3 trending digital products within a specific niche that are ideal for buying or reselling. Focus on products that:
+        Have strong online traction (high search volume, trending tags, popular listings)
+        Show high user engagement (likes, shares, saves, reviews)
+        Have proven or high potential profitability
+    Evaluate recent trends across platforms such as:
+        Etsy, Amazon, Gumroad, Shopify
+        Social media platforms (Instagram, TikTok, Pinterest, Twitter)
+    For each product, provide a concise report including:
+    Product Name & Description
+    Target Audience
+    Why It’s Currently Trending (include social signals or search demand if available)
+    Where to Source or Buy It (with a link to the platform or product)
+    Recommended Resale Platforms
+    Pricing Details (buy price and suggested resale price)
+    Estimated Profit Margin
+    Unique Selling Points or Competitive Advantages
+    Relevant Image(s) (1 image per product showing example or aesthetic)
+    Link to Product or Store Page
+    ✅ Summarize the findings in a comparison table for quick evaluation.
+    ✅ Include links and product images when available to improve clarity and visualization.
+    ✅ Ensure all data is current (within the last 30–60 days) and focused on what aligns with modern consumer digital buying behavior.`,
+        prompt: prompt,
     });
     return Response.json({ object })
 }

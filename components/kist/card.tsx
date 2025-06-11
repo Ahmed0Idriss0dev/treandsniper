@@ -5,7 +5,7 @@ import React from 'react'
 const Card = ({ description, estimated_profit_margin, pricing, product_image, product_name, resale_platforms, source_platform, target_audience, trending_reason, unique_selling_points }: Cardtype) => {
 
   return (
-    <div className='w-[60%] flex flex-col gap-2  rounded-2xl p-2 border-neutral-200 bg-white  h-full'>
+    <div className='w-full sm:w-[60%] flex flex-col gap-2  rounded-2xl p-2 border-neutral-200 bg-white  h-full'>
       <h1 className='font-semibold'>{product_name} </h1>
       <p className='text-sm opacity-80'>{description} </p>
       <div className="grid grid-cols-2 gap-2 ">
@@ -43,8 +43,8 @@ const Card = ({ description, estimated_profit_margin, pricing, product_image, pr
           <b>market demand</b>
           <p>{trending_reason?.market_demand}%</p>
         </div>
-        <div className="flex bg-teal-950 justify-center items-center h-30 rounded-2xl flex-col gap-0.5 text-white">
-          <TrendingUp className='text-yellow-200' />
+        <div className="flex bg-treand-600 justify-center items-center h-30 rounded-2xl flex-col gap-0.5 text-white">
+          <TrendingUp  />
           <b>social signals</b>
           <p>{trending_reason?.social_signals}%</p>
         </div>

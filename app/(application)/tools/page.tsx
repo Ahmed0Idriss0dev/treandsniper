@@ -9,7 +9,7 @@ import React from 'react'
 const page =  () => {
   const {isStarted } = Trending()
   return (
-    <div className='flex justify-center flex-col gap-2.5 h-dvh items-center'>
+    <div className='flex whitespace justify-center flex-col gap-2.5 h-dvh items-center'>
       {isStarted ?  <Animation/> : <Welcome/>}
 
 

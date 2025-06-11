@@ -23,7 +23,7 @@ const TextINput = () => {
         redirect(`/tools/${id}`)
       }
   return (
-  <div className="border border-treand-950/30 p-2.5 rounded-2xl h-36 w-1/2">
+  <div className="border whitespace-break-spaces border-treand-950/30 p-2.5 rounded-2xl h-40 sm:h-36 w-full sm:w-1/2">
     
         <textarea onChange={e=> settext(e.target.value)} name="" placeholder='Whats Next? ' className='w-full h-[67%] resize-none outline-0 p-2.5' id=""></textarea>
         <div className="w-full gap-1 flex justify-end items-center">

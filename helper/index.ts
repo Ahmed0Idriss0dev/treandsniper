@@ -3,7 +3,7 @@ interface parameter {
     prompt:string ,
     date?:Date
 }
-const BaseURL='https://www.trendsniper.site' ;
+const BaseURL='http://localhost:3000' ;
 export const fetchdata= async ({prompt , date}:parameter)=>{
         try {
           const response = await fetch(`${BaseURL}/api/chat`,{

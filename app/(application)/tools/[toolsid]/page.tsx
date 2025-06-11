@@ -16,7 +16,7 @@ const page = () => {
 
   return (
     <div className='flex Whitespace justify-center items-center h-max'>
-      <div className="flex justify-center w-full  rounded-2xl p-2.5 sm:w-[90%] gap-1.5 h-full ">
+      <div className="flex justify-center   rounded-2xl p-2.5 w-full sm:w-[90%] gap-1.5 h-full ">
         <Card
           description={Products?.description}
           pricing={Products?.pricing}

@@ -7,7 +7,7 @@ import Active from '../kist/Active'
 
 const ToolNav = () => {
   return (
-    <nav className='flex justify-between h-12 items-center gap-1 px-4 sm:px-8'>
+    <nav className='flex border border-neutral-200 py-2 justify-between  items-center gap-1 px-4 sm:px-8'>
        <Logo/>  
       <div className="flex items-center gap-1">
         <Active/>
