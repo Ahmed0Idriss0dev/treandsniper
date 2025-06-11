@@ -35,7 +35,7 @@ const Active = () => {
       <input onInput={e=>setKey(e.currentTarget.value)} type="text" placeholder='Your licenes key' className='w-full h-11 rounded-md border border-neutral-200 px-1.5 outline-0' />
 
       </div>
-      <a className='text-blue-700 underline text-sm' href="https://mrprobuild.gumroad.com/l/TrendingSnipe?_gl=1*1sm77yl*_ga*MTYzMDQxMzQ5LjE3NDk1NjM4NjM.*_ga_6LJN6D94N6*czE3NDk2NDM1ODgkbzUkZzEkdDE3NDk2NDM2NTIkajYwJGwwJGgw" target="_blank" rel="noopener noreferrer">
+      <a className='text-blue-700 underline text-sm' href="https://mrprobuild.gumroad.com/l/TrendSniper" target="_blank" rel="noopener noreferrer">
       get licences kay 6$
       </a>
       <Steps/>
